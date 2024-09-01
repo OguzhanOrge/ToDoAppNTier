@@ -22,7 +22,7 @@ This project demonstrates the implementation of an ASP.NET Core application usin
 
 ## Technologies
 
-- ASP.NET Core 6.0
+- ASP.NET Core 5.0
 - Entity Framework Core
 - AutoMapper
 - FluentValidation
@@ -64,50 +64,11 @@ AutoMapper is a library used to simplify object-to-object mapping. It is utilize
 
 FluentValidation is used for validating incoming data models. It provides a fluent interface for defining validation rules, promoting clean and maintainable validation logic.
 
-## Setup and Installation
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/yourusername/yourprojectname.git
-   ```
-
-2. **Navigate to the project directory**:
-   ```bash
-   cd yourprojectname
-   ```
-
-3. **Restore the project dependencies**:
-   ```bash
-   dotnet restore
-   ```
-
-4. **Update the database connection string in `appsettings.json`**:
-   ```json
-   "ConnectionStrings": {
-       "DefaultConnection": "Your SQL Server Connection String"
-   }
-   ```
-
-5. **Run the migrations to create the database**:
-   ```bash
-   dotnet ef database update
-   ```
-
-6. **Build and run the project**:
-   ```bash
-   dotnet run
-   ```
 
 ## Usage
 
-- Use Postman or any HTTP client to test the API endpoints.
 - CRUD operations are available for different entities.
 - Validation errors will return informative messages based on the FluentValidation rules.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
 
 Feel free to customize the README further to fit the specific details and requirements of your project.

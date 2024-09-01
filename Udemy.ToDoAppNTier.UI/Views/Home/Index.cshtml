@@ -1,0 +1,45 @@
+﻿@model List<WorkListDto>
+<!DOCTYPE html>
+    <html>
+    <head>
+	<title>To-Do App</title>
+	<link href="~/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    </head>
+    <body>
+  
+        <div class="container bg-dark p-4">
+            <div class="text-end">
+                <a class="btn btn-md btn-outline-info m-3" asp-action="Create" asp-controller="Home">Yeni Görev Ekle</a>
+            </div>
+           <h1 class="text-white">Tables</h1>
+        <table class="table my-5">
+            <thead>
+                <tr>
+                    <th scope="col">Work Id</th>
+                    <th scope="col">Defination</th>
+                    <th scope="col">IsComplete</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var work in Model)
+                {
+                    <tr>
+                        <td scope="row">@work.Id</td>
+                        <td>@work.Defination</td>
+                        <td>@(work.IsCompleted?"Tamamlandı":"Tamamlanmadı") </td>
+						<td>
+                            <a asp-action="Update" asp-controller="Home" asp-route-id="@work.Id" class="btn btn-warning">Update</a>
+                        </td>
+						<td>
+                            <a asp-action="Remove" asp-controller="Home" asp-route-id="@work.Id" class="btn btn-danger">Remove</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        </div>
+
+	<script src="~/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="~/node_modules/popperjs/core/dist/umd/popper.min.js"></script>
+    </body>
+    </html>

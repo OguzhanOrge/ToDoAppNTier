@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Udemy.ToDoAppNTier.Common.ResponseObject
+{
+    public class Response<T> : Response, IResponse<T>
+    {
+        public T Data { get; set; }
+        public Response(ResponseType responseType,T data) : base(responseType)
+        {
+            Data = data;
+        }
+        public Response (ResponseType responseType,string message) : base(responseType,message) { }
+        public Response(ResponseType responseType,T data,List<CustomValidaitonError> errors) : base(responseType) 
+        {
+            ValidationErrors = errors;
+            Data = data;
+        }
+        public List<CustomValidaitonError> ValidationErrors { get; set; }
+    }
+}

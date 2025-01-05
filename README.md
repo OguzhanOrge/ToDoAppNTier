@@ -1,7 +1,3 @@
-Certainly! Here's a sample README file for an ASP.NET Core project using N-Tier Architecture, FluentValidation, AutoMapper, Unit of Work, and Generic Repository Design Patterns.
-
----
-
 # ASP.NET Core Project
 
 This project demonstrates the implementation of an ASP.NET Core application using the N-Tier Architecture. It incorporates several design patterns and libraries, including FluentValidation, AutoMapper, Unit of Work, and Generic Repository. The application follows a clean and maintainable structure to promote separation of concerns and scalability.
